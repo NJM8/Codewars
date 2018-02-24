@@ -2,7 +2,8 @@
 //  main.c
 //  growthOfPopulation
 //
-//  Created by NATHAN J MALLISON on 2/23/18.
+//  Createds
+//  by NATHAN J MALLISON on 2/23/18.
 //  Copyright © 2018 NATHAN J MALLISON. All rights reserved.
 //
 
