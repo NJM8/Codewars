@@ -18,10 +18,22 @@
 
 #include "growthOfPopulation.h"
 
-double nbYear(int p0, double percent, int aug, int p) {
+int nbYear(int p0, double percent, int aug, int p) {
     double gPercent = percent / 100;
-//    while (p < p0) {
-//        <#statements#>
-//    }
-    return gPercent;
+    int count = 0;
+    
+    while (p0 < p) {
+        p0 = p0 + (p0 * gPercent) + aug;
+        count++;
+    }
+    return count;
 }
+
+
+
+
+
+
+
+
+

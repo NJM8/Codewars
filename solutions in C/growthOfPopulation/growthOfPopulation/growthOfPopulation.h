@@ -32,7 +32,7 @@
 #ifndef growthOfPopulation_h
 #define growthOfPopulation_h
 
-double nbYear(int p0, double percent, int aug, int p);
+int nbYear(int p0, double percent, int aug, int p);
 
 #include <stdio.h>
 
