@@ -59,7 +59,7 @@ char* longest(char* s1, char* s2) {
 //    for(int i = 0; i < 26; i++)
 //        if(letters[i])
 //            *(temp++) = 'a' + i;
-//    
+//
 //    return final;
 //}
 
