@@ -32,7 +32,7 @@ struct Node {
     int value;
     struct Node *next;
 };
-struct Node * counter_effect(const char *hit_count, size_t *p_result_count);
+struct Node ** counter_effect(const char *hit_count, size_t *p_result_count);
 void add_node(struct Node ** head, int val);
 
 #endif /* hitCount_h */

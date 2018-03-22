@@ -13,6 +13,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-char * makeUpperCase (char * string);
+void makeUpperCase (char * string);
 
 #endif /* makeUpperCase_h */

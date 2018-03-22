@@ -46,26 +46,28 @@
 // For an example see the sample test code.
 
 #include "hitCount.h"
+#include <string.h>
 
-struct Node * counter_effect(const char * hit_count, size_t * p_result_count) {
-    struct Node ** numbers[4] = {NULL};
-    
+struct Node ** counter_effect(const char * hit_count, size_t * p_result_count) {
+    struct Node ** numbers = malloc(4 * sizeof(struct Node*));
+    memset(numbers, 0, 4 * sizeof(struct Node*));
     for (int i = 0; i < 4; i++) {
         struct Node * new_node;
         new_node = malloc(sizeof(struct Node));
+        new_node->next = NULL;
         int count = hit_count[i] - 48;
         new_node->value = count;
         if (count == 0) {
-            numbers[i] = &new_node;
+            numbers[i] = new_node;
             continue;
         }
         for (int j = count - 1; j >= 0; j--) {
             add_node(&new_node, j);
         }
-        numbers[i] = &new_node;
+        numbers[i] = new_node;
     }
     
-    return **numbers;
+    return numbers;
 }
 
 void add_node(struct Node ** head, int val) {

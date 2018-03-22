@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     size_t res = 4;
-    struct Node * myNode;
+    struct Node ** myNode;
     myNode = counter_effect("0123", &res);
     
     return 0;

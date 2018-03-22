@@ -23,11 +23,18 @@ char* longest(char* s1, char* s2) {
     strcat(sorted, s2);
     char temp;
     int index = 0;
+    
+    int val = 56;
+    int val2 = 89;
+    int *ptr = &val;
+    printf("%d", ptr[0]);
+    printf("%d", ptr[1]);
 
     for (int i = 0; i < totalLength - 1; i++) {
         for (int j = 0; j < (totalLength - i - 2); j++) {
             if (sorted[j] > sorted[j + 1]) {
-                temp = sorted[j];
+                //temp = sorted[j]; bracket notation equivalent to *var, dereferenes when not creating.
+                temp = *(sorted +j);
                 sorted[j] = sorted[j + 1];
                 sorted[j + 1] = temp;
             }
